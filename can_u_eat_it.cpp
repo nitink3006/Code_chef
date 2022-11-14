@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int n,k;
+	    cin>>n>>k;
+	    if(n%k==0){
+	        cout<<n/k<<endl;
+	    }
+	    else cout<<"-1"<<endl;
+	}
+	return 0;
+}
+
+
+
+
+#Question
+https://www.codechef.com/problems/COMPCAND?tab=statement
