@@ -5,14 +5,16 @@ https://www.codechef.com/problems/COINS
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    int n;
-    while (cin >> n) {
-        int x;
-        if (n < 12) x = n;
-        else x = max(n, (n / 2) + (n / 3) + (n / 4));
-        cout << x << endl;
+    long coin(long n)
+    {
+     if(n>=12)
+            return coin(n/2) + coin(n/3)+ coin( n/4);
+     else
+            return n;
     }
-    return 0;
-}
-
+    int main(){
+        long n; 
+        while(cin>>n)
+            cout<<coin(n)<<endl;
+	   return 0;
+    }
